@@ -12,7 +12,7 @@ body {
 
 .cityContainer {
   margin: 0;
-  border: 1px solid rgb(67, 105, 178);
+  border: 1px solid var(--dark-pink);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -21,8 +21,8 @@ body {
 }
 
 .cityContainer:nth-child(even) {
-  background-color: navy;
-  border: 1px solid navy;
+  background-color: var(--dark-pink);
+  border: 1px solid var(--dark-pink);
 }
 
 .leftSidecityContainer {

@@ -26,7 +26,7 @@ const Home = () => {
       </div>
       <div className="home-countries">
         {countries.map((country) => (
-          <Card style={{ width: '48%' }} key={uuidv4()} className="countryInfo">
+          <Card style={{ width: '25%' }} key={uuidv4()} className="countryInfo">
             <Card.Img variant="top" />
             <Card.Body>
               <Card.Title>{country.name}</Card.Title>

@@ -19,7 +19,6 @@ const City = () => {
   return (
     <Container className="countryDisplayBlock" fluid>
       <div className="card bg-dark text-white">
-        <img src={countryInfo.flag} className="card-img" alt="..." />
         <div className="card-img-overlay countryDisplay">
           <h5 className="card-title">{countryInfo.name}</h5>
           <p className="card-text">

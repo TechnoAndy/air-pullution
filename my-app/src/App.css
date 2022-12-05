@@ -64,3 +64,9 @@ body {
   justify-content:center;
   width: 100%;
 }
+
+Button {
+  background-color: var(--pink);
+  padding: 10px;
+  font-size: 15px;
+}

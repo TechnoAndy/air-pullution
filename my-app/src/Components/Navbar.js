@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { Nav } from 'react-bootstrap';
 import './City.css';
 
-const Navbar = () => {
+/* const Navbar = () => {
   const links = [
     {
       id: 1,
@@ -35,4 +35,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar; */
