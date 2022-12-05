@@ -1,0 +1,45 @@
+@import url("http://fonts.googleapis.com/css?family=Lato:400,700");
+
+:root {
+  --pink: #f03f83;
+  --dark-pink: #ec4c8a;
+  --light-pink: #fc5193;
+}
+
+body {
+  background-color: var(--pink);
+}
+
+.cityContainer {
+  margin: 0;
+  border: 1px solid rgb(67, 105, 178);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 5rem;
+  width: 100%;
+}
+
+.cityContainer:nth-child(even) {
+  background-color: navy;
+  border: 1px solid navy;
+}
+
+.leftSidecityContainer {
+  font-family: "Lato", sans-serif;
+  width: 10rem;
+  text-align: center;
+  font-size: larger;
+  color: white;
+}
+
+.tablePollution {
+  padding: 0.2rem;
+  padding-top: 4rem;
+}
+
+.tabletextColor,
+.nav-styling {
+  font-family: "Lato", sans-serif;
+  color: white;
+}
