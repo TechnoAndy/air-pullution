@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-const url = 'https://restcountries.com/v3.1/all';
+const url = 'https://restcountries.com/v3.1/alpha?codes=za';
 const FETCH = 'FETCH';
 const FILTER = 'FILTER';
 
@@ -12,7 +12,6 @@ export const fetchCountries = createAsyncThunk(
       name: country.name.common,
       countrycode: country.cca2,
       region: country.region,
-/*       flag: country.flags.svg, */
       capital: country.capital,
     }));
     return response;
