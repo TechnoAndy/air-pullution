@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import City from './Components/City';
 import Home from './Components/Home';
-/* import Navbar from './Components/Navbar'; */
+import Navbar from './Components/Navbar';
 import Pollution from './Components/Pollution';
 
 function App() {
   return (
     <Router>
-{/*       <Navbar /> */}
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/City" element={<City />} />
