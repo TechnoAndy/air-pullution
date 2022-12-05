@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, useLocation } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import { fetchCities } from '../Redux/Reducers/Cities';
-import './City.css';
+import '../App.css';
 
 const City = () => {
   const dispatch = useDispatch();

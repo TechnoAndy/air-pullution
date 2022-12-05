@@ -1,7 +1,9 @@
+@import url("http://fonts.googleapis.com/css?family=Lato:400,700");
+
 :root {
   --pink: #f03f83;
   --dark-pink: #ec4c8a;
-  --light-pink: #fc5193
+  --light-pink: #fc5193;
 }
 
 html {
@@ -12,12 +14,46 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: #fff;
 }
 
 body {
   background-color: var(--pink);
+}
+
+.cityContainer {
+  margin: 0;
+  border: 1px solid var(--dark-pink);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 5rem;
+  width: 100%;
+}
+
+.cityContainer:nth-child(even) {
+  background-color: var(--dark-pink);
+  border: 1px solid var(--dark-pink);
+}
+
+.leftSidecityContainer {
+  font-family: "Lato", sans-serif;
+  width: 10rem;
+  text-align: center;
+  font-size: larger;
+  color: white;
+}
+
+.tablePollution {
+  padding: 0.2rem;
+  padding-top: 4rem;
+}
+
+.tabletextColor,
+.nav-styling {
+  font-family: "Lato", sans-serif;
+  color: white;
 }
 
 .home-countries {
@@ -42,7 +78,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
+  padding: 10px 10px;
 }
 
 .countryDisplayBlock {
@@ -53,7 +90,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   width: 100%;
 }
 
@@ -61,7 +98,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   width: 100%;
 }
 
@@ -69,4 +106,14 @@ Button {
   background-color: var(--pink);
   padding: 10px;
   font-size: 15px;
+}
+
+.cityContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cityContainer a:nth-child(4n + 1),
+.cityContainer a:nth-child(4n) {
+  background-color: var(--dark-pink);
 }
