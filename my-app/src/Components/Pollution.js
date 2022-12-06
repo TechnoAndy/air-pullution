@@ -23,56 +23,40 @@ const Pollution = () => {
 
   return (
     <div className="tablePollution">
-      <Table striped bordered hover responsive>
-        <thead className="tabletextColor">
+      <Table>
+        <thead className="table-Heading">
           <tr>
             <th>
-              Air Quality Index
-              <br />
               (AQI)
             </th>
             <th>
-              Carbon Monooxide
-              <br />
+
               (CO)
             </th>
             <th>
-              Nitrogen Monoxide
-              <br />
               (NO)
             </th>
             <th>
-              Nitrogen Dioxide
-              <br />
               (NO2)
             </th>
-            <th>
-              Ozone
-              <br />
-              (O3)
-            </th>
-            <th>
-              Sulphur Dioxide
-              <br />
-              (SO2)
-            </th>
+            <th>(O3)</th>
+            <th>(SO2)</th>
             <th>Time</th>
           </tr>
         </thead>
         <tbody className="tabletextColor">
           {pollutionData?.map((element) => (
             <tr key={uuidv4()}>
-              <td>{element.main.aqi}</td>
-              <td>{element.components.co}</td>
-              <td>{element.components.no}</td>
-              <td>{element.components.no2}</td>
-              <td>{element.components.o3}</td>
-              <td>{element.components.so2}</td>
-              <td><Time props={element.dt} /></td>
+              <td className="pollution-data">{element.main.aqi}</td>
+              <td className="pollution-data">{element.components.co}</td>
+              <td className="pollution-data">{element.components.no}</td>
+              <td className="pollution-data">{element.components.no2}</td>
+              <td className="pollution-data">{element.components.o3}</td>
+              <td className="pollution-data">{element.components.so2}</td>
+              <td className="pollution-data"><Time props={element.dt} /></td>
             </tr>
           ))}
         </tbody>
-
       </Table>
       {(pollutionData.length === 0) && (<div className="tabletextColor">Data for this city is currently unavailable</div>)}
     </div>

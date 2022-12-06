@@ -6,7 +6,6 @@ import { NavLink } from 'react-router-dom';
 import { fetchCountries } from '../Redux/Reducers/Countries';
 
 const Home = () => {
-  let countryName;
 
   const dispatch = useDispatch();
   const countries = useSelector((state) => state.countryReducer);
@@ -17,17 +16,16 @@ const Home = () => {
 
   return (
     <div className= "home">
-      <div className="countrySearchBox">
+      <div>
       <header>
-        <input className="countrySearch" type="text" placeholder="Country Name" value={countryName} onChange={(e) => { countryName = (e.target.value); }} />
+ {/*        <input className="countrySearch" type="text" placeholder="Search Country Name" value={countryName} onChange={(e) => { countryName = (e.target.value); }} /> */}
         <div className="map-image"><img src="./SA.png   " alt="Map Of South Africa" /></div>{/* <div className="map-image"><img src="./Canada.png   " alt="Map Of Canada" /></div> */}
         <h1>Quality of air in South African & Canadian Cities.</h1>
       </header>
       </div>
       <div className="home-countries">
         {countries.map((country) => (
-          <Card style={{ width: '25%' }} key={uuidv4()} className="countryInfo">
-            <Card.Img variant="top" />
+          <Card style={{ width: '30%' }} key={uuidv4()} className="countryInfo">
             <Card.Body>
               <Card.Title>{country.name}</Card.Title>
               <Card.Text>
@@ -36,7 +34,7 @@ const Home = () => {
                 <br />
                 {country.region}
               </Card.Text>
-              <Button variant="outline-info">
+              <Button>
                 <NavLink
                   className="nav-link "
                   to="/city"

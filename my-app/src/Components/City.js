@@ -17,9 +17,9 @@ const City = () => {
   const cities = useSelector((state) => state.citiesReducer);
 
   return (
-    <Container className="countryDisplayBlock" fluid>
+    <Container className="countryDisplayBlock">
       <div className="card bg-dark text-white">
-        <div className="card-img-overlay countryDisplay">
+        <div className="countryDisplay">
           <h5 className="card-title">{countryInfo.name}</h5>
           <p className="card-text">
             Capital:

@@ -21,11 +21,10 @@ const Navbar = () => {
   return (
 
     <header>
-      <Nav className="navbar navbar-expand-lg">
-        <div className="container-fluid">
-
-          <div className="flex-row-reverse" id="navbarNav">
-            <ul className="navbar-nav nav-styling">
+      <Nav>
+        <div>
+          <div>
+            <ul>
               {listOfLinks}
             </ul>
           </div>
