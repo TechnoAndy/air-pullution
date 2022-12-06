@@ -16,12 +16,12 @@ const Home = () => {
   }, [dispatch]);
 
   return (
-    <div id= "home">
+    <div className= "home">
       <div className="countrySearchBox">
       <header>
         <input className="countrySearch" type="text" placeholder="Country Name" value={countryName} onChange={(e) => { countryName = (e.target.value); }} />
-        <div className="map-image"><img src="./map-sa.png   " alt="Map Of South Africa" /></div>
-        <h1>Quality of air in South African Cities.</h1>
+        <div className="map-image"><img src="./SA.png   " alt="Map Of South Africa" /></div>{/* <div className="map-image"><img src="./Canada.png   " alt="Map Of Canada" /></div> */}
+        <h1>Quality of air in South African & Canadian Cities.</h1>
       </header>
       </div>
       <div className="home-countries">

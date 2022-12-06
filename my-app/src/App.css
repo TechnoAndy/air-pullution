@@ -22,6 +22,11 @@ body {
   background-color: var(--pink);
 }
 
+.nav-link {
+  display:flex;
+  align-content: flex-end;
+  padding: 10px;
+}
 .cityContainer {
   margin: 0;
   border: 1px solid var(--dark-pink);
@@ -111,9 +116,20 @@ Button {
 .cityContainer {
   display: flex;
   flex-wrap: wrap;
+  width: 50%;
+  height: 100%;
 }
 
 .cityContainer a:nth-child(4n + 1),
 .cityContainer a:nth-child(4n) {
   background-color: var(--dark-pink);
 }
+
+.home div {
+ text-align: center;
+  margin: 10px;
+  width:100%;
+  border-radius: 5px;
+}
+
+

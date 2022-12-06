@@ -23,7 +23,7 @@ const Navbar = () => {
     <header>
       <Nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
-          {/* <a className="navbar-brand nav-styling" href="/">Countries</a> */}
+
           <div className="flex-row-reverse" id="navbarNav">
             <ul className="navbar-nav nav-styling">
               {listOfLinks}
