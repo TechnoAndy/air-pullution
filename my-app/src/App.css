@@ -75,16 +75,16 @@ button {
 }
 
 .home-heading header {
-  padding: 40px;
+  padding: 2em;
   display: inline-flex;
-  margin-left: 12em;
+  margin-left: 16em;
 }
 
 .home-heading h1 {
   font-size: 33px;
   padding-top: 200px;
   text-align: center;
-  padding-left: 5rem;
+  padding-left: 1rem;
 }
 
 .home-card-heading {
