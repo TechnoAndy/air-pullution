@@ -115,12 +115,13 @@ header {
 .home-heading header {
   padding-top: 40px;
   display: inline-flex;
-  margin-left: 250px;
+  margin-left: 240px;
 }
 
 .home-heading h1 {
-  font-size: 35px;
+  font-size: 33px;
   padding-top: 200px;
+  text-align: center;
 }
 
 .home-countries {

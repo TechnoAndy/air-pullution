@@ -22,12 +22,12 @@ const Pollution = () => {
 
   return (
     <div className="tablePollution">
-      <NavLink className="nav-link" to="/city">
+
+      <NavLink className="nav-link" to="/" >
         <p>
           <span class="chevron left"></span>
         </p>
       </NavLink>
-
       <table>
         <div className="table-border">
           <thead className="table-Heading">

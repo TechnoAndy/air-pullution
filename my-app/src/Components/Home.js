@@ -19,7 +19,8 @@ const Home = () => {
       <header>
  {/*        <input className="countrySearch" type="text" placeholder="Search Country Name" value={countryName} onChange={(e) => { countryName = (e.target.value); }} /> */}
         <div className="map-image"><img src="./SA-1.png" alt="Map Of South Africa" /></div>{/* <div className="map-image"><img src="./Canada.png   " alt="Map Of Canada" /></div> */}
-        <h1>Quality of air in South African Cities.</h1>
+        <h1>Quality of air in<br>
+        </br> South African Cities.</h1>
       </header>
       </div>
       <div className="home-countries">
