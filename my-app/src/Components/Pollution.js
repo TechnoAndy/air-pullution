@@ -24,6 +24,7 @@ const Pollution = () => {
   return (
     <div className="tablePollution">
       <Table>
+        <div className="table-border">
         <thead className="table-Heading">
           <tr>
             <th>(AQI)</th>
@@ -48,6 +49,7 @@ const Pollution = () => {
             </tr>
           ))}
         </tbody>
+        </div>
       </Table>
       {(pollutionData.length === 0) && (<div className="tabletextColor">Data for this city is currently unavailable</div>)}
     </div>

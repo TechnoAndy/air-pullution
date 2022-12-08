@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { Button, Container } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, useLocation } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
@@ -17,8 +16,8 @@ const City = () => {
   const cities = useSelector((state) => state.citiesReducer);
 
   return (
-    <Container className="countryDisplayBlock">
-      <div className="card bg-dark text-white">
+    <section className="countryDisplayBlock">
+      <div>
         <div className="countryDisplay">
           <h5 className="card-title">{countryInfo.name}</h5>
           <p className="card-text">
@@ -37,12 +36,13 @@ const City = () => {
         </div>
       </div>
       {cities.data?.map((city) => (
-        <div className="cityContainer" key={uuidv4()}>
+        <div className="cityContainerMain" key={uuidv4()}>
+          <div className="cityContainer">
           <div className="leftSidecityContainer">
             {city}
           </div>
           <div className="rightSidecityContainer">
-            <Button variant="light">
+            <button variant="light">
               <NavLink
                 className="nav-link"
                 to="/pollutiondata"
@@ -53,13 +53,12 @@ const City = () => {
               >
                 Load Data
               </NavLink>
-            </Button>
+            </button>
+            </div>
           </div>
-
         </div>
       ))}
-
-    </Container>
+    </section>
   );
 };
 

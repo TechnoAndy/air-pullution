@@ -24,24 +24,32 @@ body {
 }
 
 .nav-link {
-  display:flex;
+  display: flex;
   align-content: flex-end;
   padding: 10px;
   font-size: 20px;
+  display: flex;
+  float: right;
+  margin: 0;
+}
+
+.cityContainerMain {
+  margin: 0;
+  border: 1px solid var(--pink);
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 25rem;
+  width: 25%;
 }
 
 .cityContainer {
-  margin: 0;
-  border: 1px solid var(--dark-pink);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 5rem;
-  width: 100%;
+  justify-content: center;
 }
 
-.cityContainer:nth-child(even) {
-  background-color: var(--dark-pink);
+.cityContainerMain:nth-child(even) {
+  background-color: var(--light-pink);
   border: 1px solid var(--dark-pink);
 }
 
@@ -56,6 +64,15 @@ body {
 .tablePollution {
   padding: 0.2rem;
   padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.table-border {
+  border: 2px solid var(--light-pink);
 }
 
 .table thead {
@@ -76,11 +93,34 @@ body {
   padding: 10px;
 }
 
+.home-heading header {
+  padding-top: 10px;
+  display: inline-flex;
+  margin-left: 250px;
+}
+
+.home-heading h1 {
+  font-size: 35px;
+  padding-top: 200px;
+}
+
 .home-countries {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-left: 50px;
+  width: 30%;
+  color: #fff;
+  font-size: 35px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  margin: auto;
+
+}
+
+.home-card-heading {
+  font-size: 35px;
+}
+
+.card-body {
+  padding-bottom: 20px;
+  font-size: 25px;
 }
 
 .containerCountries {
@@ -92,7 +132,6 @@ body {
 .countryInfo {
   background-color: var(--light-pink);
   color: white;
-  text-align: end;
 }
 
 /* .countrySearchBox input {
@@ -104,32 +143,25 @@ body {
   background-color: #fc5193;
 } */
 
-.countryDisplayBlock container {
-  padding-top: 4rem;
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .countryDisplay {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+  text-align: center;
+  padding: 80px;
 }
 
-.tablePollution {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+.card-title {
+  font-size: 35px;
+  text-decoration: underline;
 }
 
-.btn {
+.card-text {
+  font-size: 20px;
+}
+
+button {
   background-color: var(--pink);
-  padding: 8px;
-  font-size: 18px;
+  padding: 5px;
+  font-size: 15px;
+  border: none;
 }
 
 .cityContainer {
@@ -142,49 +174,6 @@ body {
 .cityContainer a:nth-child(4n + 1),
 .cityContainer a:nth-child(4n) {
   background-color: var(--dark-pink);
-}
-
-.home div {
-  text-align: center;
-  margin: 10px;
-  width:100%;
-  border-radius: 5px;
-}
-
-.card-body {
-  width: 100%;
-  height: 150px;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  text-align: center;
-  color: #fff;
-  font-size: 25px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  padding-right: 20px;
-}
-
-.card-text {
-  width: 100%;
-  height: 80px;
-  text-align: center;
-  color: #fff;
-  font-size: 20px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
-}
-
-.card-body,
-.card-title  {
-  font-size: 30px;
-}
-
-.card-body {
-  font-size: 30px;
-}
-
-.nav-link {
-  display: flex;
-  float: right;
 }
 
 .pollution-data:nth-child(odd) {

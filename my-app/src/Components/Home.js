@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { Button, Card } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { NavLink } from 'react-router-dom';
@@ -16,25 +15,25 @@ const Home = () => {
 
   return (
     <div className= "home">
-      <div>
+      <div className="home-heading">
       <header>
  {/*        <input className="countrySearch" type="text" placeholder="Search Country Name" value={countryName} onChange={(e) => { countryName = (e.target.value); }} /> */}
-        <div className="map-image"><img src="./SA.png   " alt="Map Of South Africa" /></div>{/* <div className="map-image"><img src="./Canada.png   " alt="Map Of Canada" /></div> */}
-        <h1>Quality of air in South African & Canadian Cities.</h1>
+        <div className="map-image"><img src="./SA-1.png" alt="Map Of South Africa" /></div>{/* <div className="map-image"><img src="./Canada.png   " alt="Map Of Canada" /></div> */}
+        <h1>Quality of air in South African Cities.</h1>
       </header>
       </div>
       <div className="home-countries">
         {countries.map((country) => (
-          <Card style={{ width: '30%' }} key={uuidv4()} className="countryInfo">
-            <Card.Body>
-              <Card.Title>{country.name}</Card.Title>
-              <Card.Text>
+          <div key={uuidv4()} className="countryInfo">
+            <div className="card-text">
+              <div className="home-card-heading">{country.name}</div>
+              <div className="card-body">
                 {country.countrycode}
                 {' '}
                 <br />
                 {country.region}
-              </Card.Text>
-              <Button>
+              </div>
+              <button>
                 <NavLink
                   className="nav-link "
                   to="/city"
@@ -44,9 +43,9 @@ const Home = () => {
                 >
                   Visit Cities
                 </NavLink>
-              </Button>
-            </Card.Body>
-          </Card>
+              </button>
+            </div>
+          </div>
         ))}
       </div>
     </div>

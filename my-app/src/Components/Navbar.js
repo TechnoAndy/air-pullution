@@ -11,15 +11,12 @@ const Navbar = () => {
       path: '/',
     },
   ];
-
   const listOfLinks = links.map((link) => (
     <li key={link.id} className="nav-link">
       <NavLink className="nav-link" to={link.path}>{link.text}</NavLink>
     </li>
   ));
-
   return (
-
     <header>
       <Nav>
         <div>
