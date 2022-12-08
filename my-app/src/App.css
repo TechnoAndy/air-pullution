@@ -77,13 +77,14 @@ button {
 .home-heading header {
   padding: 40px;
   display: inline-flex;
-  margin-left: 20em;
+  margin-left: 12em;
 }
 
 .home-heading h1 {
   font-size: 33px;
   padding-top: 200px;
   text-align: center;
+  padding-left: 5rem;
 }
 
 .home-card-heading {
