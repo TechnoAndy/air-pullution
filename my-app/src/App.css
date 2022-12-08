@@ -4,6 +4,7 @@
   --pink: #f03f83;
   --dark-pink: #ec4c8a;
   --light-pink: #fc5193;
+  --T: #51fcda;
 }
 
 html {
@@ -72,6 +73,7 @@ body {
 .pollution-data {
   font-size: 18px;
   text-align: center;
+  padding: 10px;
 }
 
 .home-countries {
@@ -102,8 +104,10 @@ body {
   background-color: #fc5193;
 } */
 
-.countryDisplayBlock {
+.countryDisplayBlock container {
   padding-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .countryDisplay {
@@ -183,4 +187,10 @@ body {
   float: right;
 }
 
+.pollution-data:nth-child(odd) {
+  background-color: var(--light-pink);
+}
 
+.table-Heading th:nth-child(even) {
+  background-color: var(--light-pink);
+}

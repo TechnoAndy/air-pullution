@@ -26,19 +26,10 @@ const Pollution = () => {
       <Table>
         <thead className="table-Heading">
           <tr>
-            <th>
-              (AQI)
-            </th>
-            <th>
-
-              (CO)
-            </th>
-            <th>
-              (NO)
-            </th>
-            <th>
-              (NO2)
-            </th>
+            <th>(AQI)</th>
+            <th>(CO)</th>
+            <th>(NO)</th>
+            <th>(NO2)</th>
             <th>(O3)</th>
             <th>(SO2)</th>
             <th>Time</th>
