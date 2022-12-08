@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Nav } from 'react-bootstrap';
 import '../App.css';
 
 const Navbar = () => {
@@ -18,7 +17,7 @@ const Navbar = () => {
   ));
   return (
     <header>
-      <Nav>
+      <nav>
         <div>
           <div>
             <ul>
@@ -26,7 +25,7 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-      </Nav>
+      </nav>
     </header>
   );
 };
