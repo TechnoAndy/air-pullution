@@ -49,6 +49,16 @@ body {
   font-size: 15px;
 }
 
+.countrySearchBox Button {
+  padding: 0.5rem;
+  background-color: var(--pink);
+  border: 2px solid var(--light-pink);
+  border-radius: 5px;
+  margin: 0.5em;
+  color: black;
+  cursor: pointer;
+}
+
 /* all buttons */
 button {
   background-color: var(--pink);
