@@ -38,10 +38,10 @@ const City = () => {
       {cities.data?.map((city) => (
         <div className="cityContainerMain" key={uuidv4()}>
           <div className="cityContainer">
-          <div className="leftSidecityContainer">
+          <div className="city-heading">
             {city}
           </div>
-          <div className="rightSidecityContainer">
+          <div className="load-data-btn">
             <button variant="light">
               <NavLink
                 className="nav-link"
@@ -54,7 +54,7 @@ const City = () => {
                 Load Data
               </NavLink>
             </button>
-            </div>
+          </div>
           </div>
         </div>
       ))}
