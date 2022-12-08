@@ -1,13 +1,12 @@
 import { useEffect } from "react";
-/* import { Link } from 'react-router-dom'; */
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useLocation } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import { fetchCities } from "../Redux/Reducers/Cities";
-/* import CityPreview from './CityPreview'; */
 import "../App.css";
 
-const City = () => {
+
+const Cities = () => {
   const dispatch = useDispatch();
   const location = useLocation();
   const countryInfo = location.state.info;
@@ -18,6 +17,7 @@ const City = () => {
   const cities = useSelector((state) => state.citiesReducer);
 
   return (
+    <section>
     <div className="countryDisplayBlock">
       <div>
         <div className="countryDisplay">
@@ -57,7 +57,8 @@ const City = () => {
         </div>
       ))}
     </div>
+  </section>
   );
 };
 
-export default City;
+export default Cities;

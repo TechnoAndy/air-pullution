@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-const url = 'https://restcountries.com/v3.1/alpha?codes=za';
+const url = 'https://restcountries.com/v3.1/region/africa';
 const FETCH = 'FETCH';
 const FILTER = 'FILTER';
 

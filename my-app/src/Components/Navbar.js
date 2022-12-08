@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { Container, Nav } from 'react-bootstrap';
 import '../App.css';
 
 const Navbar = () => {
@@ -17,15 +18,16 @@ const Navbar = () => {
   ));
   return (
     <header>
-      <nav>
-        <div>
-          <div>
-            <ul>
+      <Nav className="navbar navbar-expand-lg">
+        <Container className="container-fluid">
+          <a className="link-1" href="/">Countries</a>
+          <div className="flex-row-reverse" id="navbarNav">
+            <ul className="navbar-nav nav-styling">
               {listOfLinks}
             </ul>
           </div>
-        </div>
-      </nav>
+        </Container>
+      </Nav>
     </header>
   );
 };
