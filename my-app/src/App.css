@@ -22,7 +22,7 @@ html {
 body {
   background-color: var(--pink);
 }
-
+/* navbar */
 .nav-link {
   padding: 8px;
   font-size: 20px;
@@ -30,77 +30,34 @@ body {
   float: right;
 }
 
-.link-1{
+.link-1 {
   padding: 15px;
   font-size: 20px;
   display: flex;
   float: right;
 }
 
-header {
-  padding-bottom: -100px;
-}
-
-.cityContainerMain {
-  margin: 0;
-  border: 1px solid var(--pink);
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 20rem;
-  width: 20%;
-}
-
-.cityContainer {
-  justify-content: center;
-}
-
-.cityContainerMain:nth-child(even) {
-  background-color: var(--light-pink);
-  border: 1px solid var(--dark-pink);
-}
-
-.city-heading {
-/*   width: 50%; */
-  text-align: center;
-  font-size: 35px;
-  color: white;
-  padding-top: 40px;
-}
-
-.tablePollution {
-  padding: 0.2rem;
-  padding-top: 4rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-.table-border {
+.countrySearchBox input {
+  padding: 8px 8px;
+  margin-left: 1em;
   border: 2px solid var(--light-pink);
-}
-
-.table thead {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 20px;
   text-align: center;
+  border-radius: 5px;
+  background-color: var(--dark-pink);
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 15px;
 }
 
-.table-Heading th {
-  font-size: 30px;
+/* all buttons */
+button {
+  background-color: var(--pink);
   padding: 5px;
-  text-decoration: underline;
+  font-size: 15px;
+  border: none;
 }
 
-.pollution-data {
-  font-size: 18px;
-  text-align: center;
-  padding: 10px;
-}
-
+/* home page */
 .countryInfo {
   display: inline-flex;
   width: 20%;
@@ -112,20 +69,15 @@ header {
 }
 
 .countryInfo:nth-child(2n + 2),
-.countryInfo:nth-child(0){
+.countryInfo:nth-child(0) {
   background-color: var(--pink);
-}
-
-.cityContainer {
-  justify-content: center;
+  border: 1px solid var(--dark-pink);
 }
 
 .home-heading header {
   padding: 40px;
   display: inline-flex;
-  margin-left: 25em;
-  width: 50%;
-  height: 50rem;
+  margin-left: 20em;
 }
 
 .home-heading h1 {
@@ -143,23 +95,32 @@ header {
   padding-bottom: 20px;
   font-size: 25px;
 }
-
-.containerCountries {
-  display: flex;
-  flex-wrap: wrap;
+/* city page */
+.cityContainerMain {
+  margin: 0;
+  border: 1px solid var(--pink);
+  display: inline-flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  height: 20rem;
+  width: 20%;
 }
 
-.countrySearchBox input {
-  padding: 10px 10px;
-  margin-left: 1em;
-  border: none;
+.cityContainerMain:nth-child(even) {
+  background-color: var(--light-pink);
+  border: 1px solid var(--dark-pink);
+}
+
+.city-heading {
   text-align: center;
-  border-radius: 4px;
-  background-color: #fc5193;
-  margin-top: 10px;
-  cursor: pointer;
-  font-size: 20px;
+  font-size: 35px;
+  color: white;
+  padding-top: 40px;
+}
+
+.cityContainer {
+  justify-content: center;
 }
 
 .countryDisplay {
@@ -172,13 +133,6 @@ header {
   text-decoration: underline;
 }
 
-button {
-  background-color: var(--pink);
-  padding: 5px;
-  font-size: 15px;
-  border: none;
-}
-
 .cityContainer {
   display: flex;
   flex-wrap: wrap;
@@ -186,9 +140,35 @@ button {
   height: 100%;
 }
 
-.cityContainer a:nth-child(4n + 1),
-.cityContainer a:nth-child(4n) {
-  background-color: var(--dark-pink);
+.load-data-btn {
+  padding-bottom: 80px;
+}
+
+/* pollutiondata page */
+.tablePollution {
+  padding: 0.2rem;
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.table-border {
+  border: 2px solid var(--light-pink);
+}
+
+.table-Heading th {
+  font-size: 30px;
+  padding: 5px;
+  text-decoration: underline;
+}
+
+.pollution-data {
+  font-size: 18px;
+  text-align: center;
+  padding: 10px;
 }
 
 .pollution-data:nth-child(odd) {
@@ -197,8 +177,4 @@ button {
 
 .table-Heading th:nth-child(even) {
   background-color: var(--light-pink);
-}
-
-.load-data-btn {
-  padding-bottom: 80px;
 }
