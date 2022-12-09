@@ -213,9 +213,12 @@ button {
     border: 1px solid var(--dark-pink);
   }
 
- .home-heading header {
-    width: 50%;
+/*  .home-heading header {
     padding-right: 10rem;
+  } */
+
+  .map-image img {
+    width: 400%;
   }
 
   .home-heading h1 {
