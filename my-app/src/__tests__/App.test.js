@@ -8,7 +8,7 @@ import City from '../Components/City';
 import Home from '../Components/Home';
 import Pollution from '../Components/Pollution';
 
-it('Test City component', () => {
+it('App', () => {
   const utils = render(
     <Provider store={store}>
       <Router>

@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import store from '../Redux/configureStore';
 import City from '../Components/City';
 
-it('Test City component', () => {
+it('City', () => {
   const utils = render(
     <Provider store={store}>
       <Router>

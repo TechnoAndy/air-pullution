@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import store from '../Redux/configureStore';
 import Pollution from '../Components/Pollution';
 
-it('Test City component', () => {
+it('Pollution', () => {
   const utils = render(
     <Provider store={store}>
       <Router>
