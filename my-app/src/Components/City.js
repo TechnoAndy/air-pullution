@@ -1,33 +1,32 @@
-import { useEffect } from 'react';
-import { Button, Container } from 'react-bootstrap';
-import { useDispatch, useSelector } from 'react-redux';
-import { NavLink, useLocation } from 'react-router-dom';
-import { v4 as uuidv4 } from 'uuid';
-import { fetchCities } from '../Redux/Reducers/Cities';
-import '../App.css';
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { NavLink, useLocation } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
+import { fetchCities } from "../Redux/Reducers/Cities";
+import "../App.css";
 
-const City = () => {
+
+const Cities = () => {
   const dispatch = useDispatch();
   const location = useLocation();
   const countryInfo = location.state.info;
   useEffect(() => {
     dispatch(fetchCities(countryInfo.name));
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch]);
   const cities = useSelector((state) => state.citiesReducer);
 
   return (
-    <Container className="countryDisplayBlock" fluid>
-      <div className="card bg-dark text-white">
-        <div className="card-img-overlay countryDisplay">
+    <section>
+    <div className="countryDisplayBlock">
+      <div>
+        <div className="countryDisplay">
           <h5 className="card-title">{countryInfo.name}</h5>
           <p className="card-text">
             Capital:
             {countryInfo.capital[0]}
             <br />
-            No. of cities:
-            {' '}
-            {cities.data?.length}
+            No. of cities: {cities.data?.length}
             <br />
           </p>
           <p className="card-text">
@@ -37,12 +36,12 @@ const City = () => {
         </div>
       </div>
       {cities.data?.map((city) => (
-        <div className="cityContainer" key={uuidv4()}>
-          <div className="leftSidecityContainer">
-            {city}
+        <div className="cityContainerMain" key={uuidv4()}>
+          <div className="cityContainer">
+            <div className="city-heading">{city}</div>
           </div>
-          <div className="rightSidecityContainer">
-            <Button variant="light">
+          <div className="load-data-btn">
+            <button variant="light">
               <NavLink
                 className="nav-link"
                 to="/pollutiondata"
@@ -53,14 +52,13 @@ const City = () => {
               >
                 Load Data
               </NavLink>
-            </Button>
+            </button>
           </div>
-
         </div>
       ))}
-
-    </Container>
+    </div>
+  </section>
   );
 };
 
-export default City;
+export default Cities;

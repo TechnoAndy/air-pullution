@@ -1,9 +1,9 @@
-import { useEffect } from 'react';
-import { Button, Card } from 'react-bootstrap';
-import { useDispatch, useSelector } from 'react-redux';
-import { v4 as uuidv4 } from 'uuid';
-import { NavLink } from 'react-router-dom';
-import { fetchCountries } from '../Redux/Reducers/Countries';
+import { useEffect } from "react";
+import { Button, Container } from 'react-bootstrap';
+import { useDispatch, useSelector } from "react-redux";
+import { v4 as uuidv4 } from "uuid";
+import { NavLink } from "react-router-dom";
+import { fetchCountries, filteredCountries } from "../Redux/Reducers/Countries";
 
 const Home = () => {
   let countryName;
@@ -16,41 +16,55 @@ const Home = () => {
   }, [dispatch]);
 
   return (
-    <div id= "home">
+    <div className="home">
       <div className="countrySearchBox">
-      <header>
         <input className="countrySearch" type="text" placeholder="Country Name" value={countryName} onChange={(e) => { countryName = (e.target.value); }} />
-        <div className="map-image"><img src="./map-sa.png   " alt="Map Of South Africa" /></div>
-        <h1>Quality of air in South African Cities.</h1>
-      </header>
+        <Button
+          variant="secondary"
+          type="button"
+          onClick={async () => {
+            await dispatch(fetchCountries());
+            dispatch(filteredCountries(countryName));
+          }}
+        >
+          Search
+        </Button>
       </div>
-      <div className="home-countries">
+      <div className="home-heading">
+        <header>
+          <div className="map-image">
+            <img src="./africa.png" alt="Map Of Africa" />
+          </div>
+          <h1>
+            Quality of air in<br></br> Africa.
+          </h1>
+        </header>
+      </div>
+
+      <Container className="home-countries">
         {countries.map((country) => (
-          <Card style={{ width: '25%' }} key={uuidv4()} className="countryInfo">
-            <Card.Img variant="top" />
-            <Card.Body>
-              <Card.Title>{country.name}</Card.Title>
-              <Card.Text>
-                {country.countrycode}
-                {' '}
-                <br />
-                {country.region}
-              </Card.Text>
-              <Button variant="outline-info">
-                <NavLink
-                  className="nav-link "
-                  to="/city"
-                  state={{
-                    info: country,
-                  }}
-                >
-                  Visit Cities
-                </NavLink>
-              </Button>
-            </Card.Body>
-          </Card>
+          <div key={uuidv4()} className="countryInfo">
+              <div className="card-text">
+                <div className="home-card-heading">{country.name}</div>
+                <div className="card-body">
+                  {country.countrycode} <br />
+                  {country.region}
+                </div>
+                <button>
+                  <NavLink
+                    className="nav-link "
+                    to="/city"
+                    state={{
+                      info: country,
+                    }}
+                  >
+                    Visit Cities
+                  </NavLink>
+                </button>
+              </div>
+          </div>
         ))}
-      </div>
+      </Container>
     </div>
   );
 };

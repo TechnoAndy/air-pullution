@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Nav } from 'react-bootstrap';
+import { Container, Nav } from 'react-bootstrap';
 import '../App.css';
 
 const Navbar = () => {
@@ -11,25 +11,22 @@ const Navbar = () => {
       path: '/',
     },
   ];
-
   const listOfLinks = links.map((link) => (
     <li key={link.id} className="nav-link">
       <NavLink className="nav-link" to={link.path}>{link.text}</NavLink>
     </li>
   ));
-
   return (
-
     <header>
       <Nav className="navbar navbar-expand-lg">
-        <div className="container-fluid">
-          {/* <a className="navbar-brand nav-styling" href="/">Countries</a> */}
+        <Container className="container-fluid">
+          <a className="link-1" href="/">Countries</a>
           <div className="flex-row-reverse" id="navbarNav">
             <ul className="navbar-nav nav-styling">
               {listOfLinks}
             </ul>
           </div>
-        </div>
+        </Container>
       </Nav>
     </header>
   );
