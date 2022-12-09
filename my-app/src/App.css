@@ -84,16 +84,11 @@ button {
   border: 1px solid var(--dark-pink);
 }
 
-.map-image {
-  width: 50%;
-  height: 2em;
-}
-
 .home-heading header {
   padding: 2em;
   display: inline-flex;
-  margin-left: 16em;
-  width: 50%;
+  margin-left: 25em;
+  width: 100%;
   height: 50%;
 }
 
@@ -101,7 +96,7 @@ button {
   font-size: 33px;
   padding-top: 200px;
   text-align: center;
-  /*   padding-left: .5rem; */
+  padding-left: 0.5rem;
 }
 
 .home-card-heading {
@@ -197,67 +192,70 @@ button {
   background-color: var(--light-pink);
 }
 
-@media only screen and (min-width: 300px) {
-  .countrySearchBox input {
-    width: 25%;
-  }
-
+@media only screen and (min-width: 700px) {
   /* home page */
+  .home-heading header {
+    margin-left: -1em;
+    width: 100%;
+    height: 50%;
+  }
+
   .countryInfo {
-    width: 50%;
-    height: 20rem;
+    width: 100%;
+
   }
 
-  .countryInfo:nth-child(2n) {
-    background-color: var(--pink);
-    border: 1px solid var(--dark-pink);
-  }
-
-/*  .home-heading header {
-    padding-right: 10rem;
-  } */
-
-  .map-image img {
-    width: 400%;
-  }
-
-  .home-heading h1 {
-    text-align: center;
-    padding-left: 0.1rem;
-  }
-
-  /* city page */
   .cityContainerMain {
-    height: 20rem;
-    width: 50%;
+    width: 100%;
+
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  /* home page */
+  .home-heading header {
+    margin-left: -1em;
+  }
+
+  .countryInfo {
+    width: 100%;
+
+  }
+
+  .cityContainerMain {
+    width: 100%;
   }
 
   .cityContainerMain:nth-child(even) {
     background-color: var(--light-pink);
-    border: 1px solid var(--dark-pink);
-  }
 
-  .countryDisplay {
-    text-align: center;
-    padding: 80px;
-  }
-
-  .card-title {
-    font-size: 35px;
-    text-decoration: underline;
-  }
-
-  .cityContainer {
-    display: flex;
-    flex-wrap: wrap;
-    width: 50%;
-    height: 100%;
   }
 
   /* pollutiondata page */
   .tablePollution {
-    width: 50%;
-    height: 100%;
-    padding: 4rem;
+    padding: 0.2rem;
+    padding-top: 4rem;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  /* home page */
+  .home-heading header {
+    margin-left: 25em;
+  }
+  .countryInfo {
+    width: 20%;
+  }
+
+  .cityContainerMain {
+    width: 20%;
+  }
+
+  /* pollutiondata page */
+  .tablePollution {
+    padding: 0.2rem;
+    padding-top: 4rem;
+    width: 100%;
   }
 }
